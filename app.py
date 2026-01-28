@@ -78,8 +78,7 @@ st.markdown("""
 3. 點擊按鈕下載產出的 **.docx** 檔。
 """)
 
-uploaded_file = st.file_uploader("選擇 TXT 檔案", type="txt")
-
+uploaded_file = st.file_uploader("📂 選擇檔案 (請上傳您的 .txt 檔)", type="txt", help="支援 utf-8 格式的純文字檔案")
 if uploaded_file is not None:
     # 讀取檔案內容
     stringio = uploaded_file.getvalue().decode("utf-8")
